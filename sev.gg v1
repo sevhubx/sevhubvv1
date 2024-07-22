@@ -1,0 +1,579 @@
+--[[
+ .____                  ________ ___.    _____                           __                
+ |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
+ |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
+ |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
+ |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
+         \/          \/         \/    \/                \/     \/     \/                   
+          \_Welcome to LuaObfuscator.com   (Alpha 0.10.6) ~  Much Love, Ferib 
+
+]]--
+
+local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))();
+local Window = Rayfield:CreateWindow({Name="Sev's Hub V.1",LoadingTitle="Made By sev.gg",LoadingSubtitle="by sev.gg",ConfigurationSaving={Enabled=true,FolderName=nil,FileName="sev"},Discord={Enabled=true,Invite="YBb4jXYsrx",RememberJoins=true},KeySystem=true,KeySettings={Title="sev hub key",Subtitle="Key System",Note="key will be in discord server",FileName="Key",SaveKey=true,GrabKeyFromSite=false,Key={"sev.gg"}}});
+local MainTab = Window:CreateTab("Options", nil);
+local MainSection = MainTab:CreateSection("Main");
+Rayfield:Notify({Title="script",Content="executed!",Duration=6.5,Image=4483362458,Actions={Ignore={Name="Okay!",Callback=function()
+	print("The user tapped Okay!");
+end}}});
+local Button = MainTab:CreateButton({Name="Esp (recommended!)",Callback=function()
+	local FlatIdent_95CAC = 0;
+	local Players;
+	local RunService;
+	local highlight;
+	while true do
+		if (FlatIdent_95CAC == 2) then
+			for i, v in pairs(Players) do
+				local FlatIdent_2953F = 0;
+				while true do
+					if (FlatIdent_2953F == 0) then
+						repeat
+							wait();
+						until v.Character 
+						if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+							local highlightClone = highlight:Clone();
+							highlightClone.Adornee = v.Character;
+							highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart");
+							highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop;
+							highlightClone.Name = "Highlight";
+						end
+						break;
+					end
+				end
+			end
+			game.Players.PlayerAdded:Connect(function(player)
+				local FlatIdent_2FBEB = 0;
+				while true do
+					if (FlatIdent_2FBEB == 0) then
+						repeat
+							wait();
+						until player.Character 
+						if not player.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+							local FlatIdent_8D83D = 0;
+							local highlightClone;
+							while true do
+								if (FlatIdent_8D83D == 1) then
+									highlightClone.Parent = player.Character:FindFirstChild("HumanoidRootPart");
+									highlightClone.Name = "Highlight";
+									break;
+								end
+								if (FlatIdent_8D83D == 0) then
+									highlightClone = highlight:Clone();
+									highlightClone.Adornee = player.Character;
+									FlatIdent_8D83D = 1;
+								end
+							end
+						end
+						break;
+					end
+				end
+			end);
+			FlatIdent_95CAC = 3;
+		end
+		if (FlatIdent_95CAC == 0) then
+			Players = game:GetService("Players"):GetChildren();
+			RunService = game:GetService("RunService");
+			FlatIdent_95CAC = 1;
+		end
+		if (FlatIdent_95CAC == 3) then
+			game.Players.PlayerRemoving:Connect(function(playerRemoved)
+				playerRemoved.Character:FindFirstChild("HumanoidRootPart").Highlight:Destroy();
+			end);
+			RunService.Heartbeat:Connect(function()
+				for i, v in pairs(Players) do
+					local FlatIdent_44839 = 0;
+					while true do
+						if (FlatIdent_44839 == 0) then
+							repeat
+								wait();
+							until v.Character 
+							if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+								local FlatIdent_25011 = 0;
+								local highlightClone;
+								while true do
+									if (FlatIdent_25011 == 2) then
+										highlightClone.Name = "Highlight";
+										task.wait();
+										break;
+									end
+									if (FlatIdent_25011 == 1) then
+										highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart");
+										highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop;
+										FlatIdent_25011 = 2;
+									end
+									if (FlatIdent_25011 == 0) then
+										highlightClone = highlight:Clone();
+										highlightClone.Adornee = v.Character;
+										FlatIdent_25011 = 1;
+									end
+								end
+							end
+							break;
+						end
+					end
+				end
+			end);
+			break;
+		end
+		if (FlatIdent_95CAC == 1) then
+			highlight = Instance.new("Highlight");
+			highlight.Name = "Highlight";
+			FlatIdent_95CAC = 2;
+		end
+	end
+end});
+local Button = MainTab:CreateButton({Name="camlock",Callback=function()
+	local FlatIdent_61585 = 0;
+	while true do
+		if (FlatIdent_61585 == 1) then
+			getgenv().AimbotStrengthAmount = 1;
+			getgenv().PredictionAmount = 7;
+			getgenv().Radius = 25;
+			FlatIdent_61585 = 2;
+		end
+		if (FlatIdent_61585 == 2) then
+			getgenv().UsePrediction = true;
+			getgenv().AimbotStrength = true;
+			getgenv().FirstPerson = true;
+			FlatIdent_61585 = 3;
+		end
+		if (FlatIdent_61585 == 3) then
+			getgenv().ThirdPerson = true;
+			getgenv().TeamCheck = false;
+			getgenv().Enabled = true;
+			FlatIdent_61585 = 4;
+		end
+		if (FlatIdent_61585 == 4) then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/tenaaki/GenericAimbot/main/v1.0.0"))();
+			break;
+		end
+		if (FlatIdent_61585 == 0) then
+			getgenv().RecurringPoint = "UpperTorso";
+			getgenv().Hitbox = "UpperTorso";
+			getgenv().Keybind = "c";
+			FlatIdent_61585 = 1;
+		end
+	end
+end});
+local MiscTab = Window:CreateTab("More", nil);
+local Section = MiscTab:CreateSection("Extra");
+local Button = MiscTab:CreateButton({Name="Low Gfx",Callback=function()
+	local decalsyeeted = true;
+	local g = game;
+	local w = g.Workspace;
+	local l = g.Lighting;
+	local t = w.Terrain;
+	t.WaterWaveSize = 0;
+	t.WaterWaveSpeed = 0;
+	t.WaterReflectance = 0;
+	t.WaterTransparency = 0;
+	l.GlobalShadows = false;
+	l.FogEnd = 8999999488;
+	l.Brightness = 0;
+	settings().Rendering.QualityLevel = "Level01";
+	for i, v in pairs(g:GetDescendants()) do
+		if (v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart")) then
+			v.Material = "Plastic";
+			v.Reflectance = 0;
+		elseif (v:IsA("Decal") or (v:IsA("Texture") and decalsyeeted)) then
+			v.Transparency = 1;
+		elseif (v:IsA("ParticleEmitter") or v:IsA("Trail")) then
+			v.Lifetime = NumberRange.new(0);
+		elseif v:IsA("Explosion") then
+			local FlatIdent_6053C = 0;
+			while true do
+				if (FlatIdent_6053C == 0) then
+					v.BlastPressure = 1;
+					v.BlastRadius = 1;
+					break;
+				end
+			end
+		elseif (v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke")) then
+			v.Enabled = false;
+		elseif v:IsA("MeshPart") then
+			local FlatIdent_8F59B = 0;
+			while true do
+				if (FlatIdent_8F59B == 0) then
+					v.Material = "Plastic";
+					v.Reflectance = 0;
+					FlatIdent_8F59B = 1;
+				end
+				if (FlatIdent_8F59B == 1) then
+					v.TextureID = 10385902758728956;
+					break;
+				end
+			end
+		end
+	end
+	for i, e in pairs(l:GetChildren()) do
+		if (e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect")) then
+			e.Enabled = false;
+		end
+	end
+end});
+local Button = MiscTab:CreateButton({Name="noclip",Callback=function()
+	local FlatIdent_8CEDF = 0;
+	local Workspace;
+	local CoreGui;
+	local Players;
+	local Noclip;
+	local BG;
+	local Title;
+	local Toggle;
+	local StatusPF;
+	local Status;
+	local Credit;
+	local Plr;
+	local Clipon;
+	while true do
+		if (FlatIdent_8CEDF == 14) then
+			Credit.Font = Enum.Font.SourceSans;
+			Credit.FontSize = Enum.FontSize.Size18;
+			Credit.Text = "By Sev Hub";
+			Credit.TextColor3 = Color3.new(1, 1, 1);
+			Credit.TextSize = 16;
+			Credit.TextStrokeColor3 = Color3.new(0.196078, 0.196078, 0.196078);
+			FlatIdent_8CEDF = 15;
+		end
+		if (FlatIdent_8CEDF == 11) then
+			Status.BackgroundTransparency = 1;
+			Status.Position = UDim2.new(0.580952346, 0, 0.708661377, 0);
+			Status.Size = UDim2.new(0, 56, 0, 20);
+			Status.Font = Enum.Font.Highway;
+			Status.FontSize = Enum.FontSize.Size14;
+			Status.Text = "off";
+			FlatIdent_8CEDF = 12;
+		end
+		if (FlatIdent_8CEDF == 8) then
+			Toggle.TextStrokeTransparency = 0;
+			StatusPF.Name = "StatusPF";
+			StatusPF.Parent = BG;
+			StatusPF.BackgroundColor3 = Color3.new(1, 1, 1);
+			StatusPF.BackgroundTransparency = 1;
+			StatusPF.Position = UDim2.new(0.314285725, 0, 0.708661377, 0);
+			FlatIdent_8CEDF = 9;
+		end
+		if (FlatIdent_8CEDF == 15) then
+			Credit.TextStrokeTransparency = 0;
+			Credit.TextWrapped = true;
+			Toggle.MouseButton1Click:connect(function()
+				if (Status.Text == "off") then
+					local FlatIdent_61EE = 0;
+					while true do
+						if (0 == FlatIdent_61EE) then
+							Clipon = true;
+							Status.Text = "on";
+							FlatIdent_61EE = 1;
+						end
+						if (1 == FlatIdent_61EE) then
+							Status.TextColor3 = Color3.new(0, 185, 0);
+							Stepped = game:GetService("RunService").Stepped:Connect(function()
+								if (not Clipon == false) then
+									for a, b in pairs(Workspace:GetChildren()) do
+										if (b.Name == Plr.Name) then
+											for i, v in pairs(Workspace[Plr.Name]:GetChildren()) do
+												if v:IsA("BasePart") then
+													v.CanCollide = false;
+												end
+											end
+										end
+									end
+								else
+									Stepped:Disconnect();
+								end
+							end);
+							break;
+						end
+					end
+				elseif (Status.Text == "on") then
+					local FlatIdent_6C033 = 0;
+					while true do
+						if (0 == FlatIdent_6C033) then
+							Clipon = false;
+							Status.Text = "off";
+							FlatIdent_6C033 = 1;
+						end
+						if (FlatIdent_6C033 == 1) then
+							Status.TextColor3 = Color3.new(170, 0, 0);
+							break;
+						end
+					end
+				end
+			end);
+			break;
+		end
+		if (FlatIdent_8CEDF == 2) then
+			Noclip.Name = "Noclip";
+			Noclip.Parent = game.CoreGui;
+			BG.Name = "BG";
+			BG.Parent = Noclip;
+			BG.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392);
+			BG.BorderColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235);
+			FlatIdent_8CEDF = 3;
+		end
+		if (FlatIdent_8CEDF == 12) then
+			Status.TextColor3 = Color3.new(0.666667, 0, 0);
+			Status.TextScaled = true;
+			Status.TextSize = 14;
+			Status.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373);
+			Status.TextWrapped = true;
+			Status.TextXAlignment = Enum.TextXAlignment.Left;
+			FlatIdent_8CEDF = 13;
+		end
+		if (FlatIdent_8CEDF == 6) then
+			Toggle.Parent = BG;
+			Toggle.BackgroundColor3 = Color3.new(0.266667, 0.00392157, 0.627451);
+			Toggle.BorderColor3 = Color3.new(0.180392, 0, 0.431373);
+			Toggle.BorderSizePixel = 2;
+			Toggle.Position = UDim2.new(0.152380958, 0, 0.374192119, 0);
+			Toggle.Size = UDim2.new(0, 146, 0, 36);
+			FlatIdent_8CEDF = 7;
+		end
+		if (FlatIdent_8CEDF == 1) then
+			Toggle = Instance.new("TextButton");
+			StatusPF = Instance.new("TextLabel");
+			Status = Instance.new("TextLabel");
+			Credit = Instance.new("TextLabel");
+			Plr = Players.LocalPlayer;
+			Clipon = false;
+			FlatIdent_8CEDF = 2;
+		end
+		if (FlatIdent_8CEDF == 0) then
+			Workspace = game:GetService("Workspace");
+			CoreGui = game:GetService("CoreGui");
+			Players = game:GetService("Players");
+			Noclip = Instance.new("ScreenGui");
+			BG = Instance.new("Frame");
+			Title = Instance.new("TextLabel");
+			FlatIdent_8CEDF = 1;
+		end
+		if (FlatIdent_8CEDF == 7) then
+			Toggle.Font = Enum.Font.Highway;
+			Toggle.FontSize = Enum.FontSize.Size28;
+			Toggle.Text = "Toggle";
+			Toggle.TextColor3 = Color3.new(1, 1, 1);
+			Toggle.TextSize = 25;
+			Toggle.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373);
+			FlatIdent_8CEDF = 8;
+		end
+		if (FlatIdent_8CEDF == 10) then
+			StatusPF.TextStrokeColor3 = Color3.new(0.333333, 0.333333, 0.333333);
+			StatusPF.TextStrokeTransparency = 0;
+			StatusPF.TextWrapped = true;
+			Status.Name = "Status";
+			Status.Parent = BG;
+			Status.BackgroundColor3 = Color3.new(1, 1, 1);
+			FlatIdent_8CEDF = 11;
+		end
+		if (FlatIdent_8CEDF == 5) then
+			Title.Text = "Noclip";
+			Title.TextColor3 = Color3.new(1, 1, 1);
+			Title.FontSize = Enum.FontSize.Size32;
+			Title.TextSize = 30;
+			Title.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373);
+			Title.TextStrokeTransparency = 0;
+			FlatIdent_8CEDF = 6;
+		end
+		if (FlatIdent_8CEDF == 13) then
+			Credit.Name = "Credit";
+			Credit.Parent = BG;
+			Credit.BackgroundColor3 = Color3.new(1, 1, 1);
+			Credit.BackgroundTransparency = 1;
+			Credit.Position = UDim2.new(0.195238099, 0, 0.866141737, 0);
+			Credit.Size = UDim2.new(0, 128, 0, 17);
+			FlatIdent_8CEDF = 14;
+		end
+		if (FlatIdent_8CEDF == 3) then
+			BG.BorderSizePixel = 2;
+			BG.Position = UDim2.new(0.149479166, 0, 0.82087779, 0);
+			BG.Size = UDim2.new(0, 210, 0, 127);
+			BG.Active = true;
+			BG.Draggable = true;
+			Title.Name = "Title";
+			FlatIdent_8CEDF = 4;
+		end
+		if (FlatIdent_8CEDF == 9) then
+			StatusPF.Size = UDim2.new(0, 56, 0, 20);
+			StatusPF.Font = Enum.Font.Highway;
+			StatusPF.FontSize = Enum.FontSize.Size24;
+			StatusPF.Text = "Status:";
+			StatusPF.TextColor3 = Color3.new(1, 1, 1);
+			StatusPF.TextSize = 20;
+			FlatIdent_8CEDF = 10;
+		end
+		if (FlatIdent_8CEDF == 4) then
+			Title.Parent = BG;
+			Title.BackgroundColor3 = Color3.new(0.266667, 0.00392157, 0.627451);
+			Title.BorderColor3 = Color3.new(0.180392, 0, 0.431373);
+			Title.BorderSizePixel = 2;
+			Title.Size = UDim2.new(0, 210, 0, 33);
+			Title.Font = Enum.Font.Highway;
+			FlatIdent_8CEDF = 5;
+		end
+	end
+end});
+local Toggle = MiscTab:CreateToggle({Name="mouse lock (broken)",CurrentValue=false,Flag="Toggle1",Callback=function(Value)
+	local Area = game:GetService("Workspace");
+	local RunService = game:GetService("RunService");
+	local UIS = game:GetService("UserInputService");
+	local Players = game:GetService("Players");
+	local LocalPlayer = Players.LocalPlayer;
+	local MyCharacter = LocalPlayer.Character;
+	local MyRoot = MyCharacter:FindFirstChild("HumanoidRootPart");
+	local MyHumanoid = MyCharacter:FindFirstChild("Humanoid");
+	local Mouse = LocalPlayer:GetMouse();
+	local MyView = Area.CurrentCamera;
+	local MyTeamColor = LocalPlayer.TeamColor;
+	local HoldingM2 = false;
+	local Active = false;
+	local Lock = false;
+	local Epitaph = 0.187;
+	local HeadOffset = Vector3.new(0, 0.1, 0);
+	_G.TeamCheck = false;
+	_G.AimPart = "HumanoidRootPart";
+	_G.Sensitivity = 0;
+	_G.CircleSides = 64;
+	_G.CircleColor = Color3.fromRGB(255, 0, 130);
+	_G.CircleTransparency = 0;
+	_G.CircleRadius = 200;
+	_G.CircleFilled = false;
+	_G.CircleVisible = true;
+	_G.CircleThickness = 1;
+	local FOVCircle = Drawing.new("Circle");
+	FOVCircle.Position = Vector2.new(MyView.ViewportSize.X / 2, MyView.ViewportSize.Y / 2);
+	FOVCircle.Radius = _G.CircleRadius;
+	FOVCircle.Filled = _G.CircleFilled;
+	FOVCircle.Color = _G.CircleColor;
+	FOVCircle.Visible = _G.CircleVisible;
+	FOVCircle.Transparency = _G.CircleTransparency;
+	FOVCircle.NumSides = _G.CircleSides;
+	FOVCircle.Thickness = _G.CircleThickness;
+	local function CursorLock()
+		UIS.MouseBehavior = Enum.MouseBehavior.LockCenter;
+	end
+	local function UnLockCursor()
+		local FlatIdent_90A41 = 0;
+		while true do
+			if (FlatIdent_90A41 == 1) then
+				Lock = false;
+				UIS.MouseBehavior = Enum.MouseBehavior.Default;
+				break;
+			end
+			if (FlatIdent_90A41 == 0) then
+				HoldingM2 = false;
+				Active = false;
+				FlatIdent_90A41 = 1;
+			end
+		end
+	end
+	function FindNearestPlayer()
+		local dist = math.huge;
+		local Target = nil;
+		for _, v in pairs(Players:GetPlayers()) do
+			if ((v ~= LocalPlayer) and v.Character:FindFirstChild("Humanoid") and (v.Character:FindFirstChild("Humanoid").Health > 0) and v.Character:FindFirstChild("HumanoidRootPart") and v) then
+				local FlatIdent_7DFA5 = 0;
+				local TheirCharacter;
+				local CharacterRoot;
+				local Visible;
+				while true do
+					if (FlatIdent_7DFA5 == 1) then
+						if Visible then
+							local FlatIdent_25A9F = 0;
+							local RealMag;
+							while true do
+								if (FlatIdent_25A9F == 0) then
+									RealMag = (Vector2.new(Mouse.X, Mouse.Y) - Vector2.new(CharacterRoot.X, CharacterRoot.Y)).Magnitude;
+									if ((RealMag < dist) and (RealMag < FOVCircle.Radius)) then
+										dist = RealMag;
+										Target = TheirCharacter;
+									end
+									break;
+								end
+							end
+						end
+						break;
+					end
+					if (FlatIdent_7DFA5 == 0) then
+						TheirCharacter = v.Character;
+						CharacterRoot, Visible = MyView:WorldToViewportPoint(TheirCharacter[_G.AimPart].Position);
+						FlatIdent_7DFA5 = 1;
+					end
+				end
+			end
+		end
+		return Target;
+	end
+	UIS.InputBegan:Connect(function(Input)
+		if (Input.UserInputType == Enum.UserInputType.MouseButton2) then
+			local FlatIdent_72421 = 0;
+			while true do
+				if (FlatIdent_72421 == 1) then
+					Lock = true;
+					if Active then
+						local FlatIdent_3B7E2 = 0;
+						local The_Enemy;
+						while true do
+							if (FlatIdent_3B7E2 == 0) then
+								The_Enemy = FindNearestPlayer();
+								while HoldingM2 do
+									local FlatIdent_1013A = 0;
+									while true do
+										if (0 == FlatIdent_1013A) then
+											task.wait(0.000001);
+											if (Lock and (The_Enemy ~= nil)) then
+												local FlatIdent_77172 = 0;
+												local Future;
+												while true do
+													if (FlatIdent_77172 == 1) then
+														CursorLock();
+														break;
+													end
+													if (FlatIdent_77172 == 0) then
+														Future = The_Enemy.HumanoidRootPart.CFrame + (The_Enemy.HumanoidRootPart.Velocity * Epitaph) + HeadOffset;
+														MyView.CFrame = CFrame.lookAt(MyView.CFrame.Position, Future.Position);
+														FlatIdent_77172 = 1;
+													end
+												end
+											end
+											break;
+										end
+									end
+								end
+								break;
+							end
+						end
+					end
+					break;
+				end
+				if (FlatIdent_72421 == 0) then
+					HoldingM2 = true;
+					Active = true;
+					FlatIdent_72421 = 1;
+				end
+			end
+		end
+	end);
+	UIS.InputEnded:Connect(function(Input)
+		if (Input.UserInputType == Enum.UserInputType.MouseButton2) then
+			UnLockCursor();
+		end
+	end);
+	game.StarterGui:SetCore("SendNotification", {Title="Sev Hub",Text="Loaded",Duration=5});
+end});
+local Button = MiscTab:CreateButton({Name="inf double jump",Callback=function()
+	local FlatIdent_7E707 = 0;
+	local infjmp;
+	while true do
+		if (FlatIdent_7E707 == 0) then
+			infjmp = true;
+			game:GetService("UserInputService").jumpRequest:Connect(function()
+				if infjmp then
+					game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping");
+				end
+			end);
+			break;
+		end
+	end
+end});
+local Button = MiscTab:CreateButton({Name="fly script coming tmr cs you fags could not wait",Callback=function()
+end});
